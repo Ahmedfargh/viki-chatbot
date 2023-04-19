@@ -1,0 +1,48 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: name_query
+  steps:
+  - intent: NameQuery
+  - action: utter_name_query
+  - checkpoint: name_query_point
+
+- story:  byby
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  - checkpoint: by_by
+
+- story: who are you
+  steps:
+  - intent: CourtesyGreeting
+  - action: utter_CourtesyGreeting
+  - checkpoint: how_do_you_do

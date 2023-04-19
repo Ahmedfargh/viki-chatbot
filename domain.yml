@@ -1,0 +1,79 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - NameQuery
+  - Clever
+  - CourtesyGreeting
+  - CourtesyGreetingResponse
+  - CurrentHumanQuery
+  - Gossip
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Good Bye"
+  - text: "go with peace"
+  - text: "God blease you"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_thanks:
+  - text: "thank you"
+  - text: "your so kind"
+  - text: "OK thank you"
+  - text: "OK thanks"
+  - text: "OK"
+  - text: "Thanks"
+  - text: "Thank you"
+  - text: "That's helpful"
+
+  utter_thank_resp:
+  - text: "you're welcome"
+  - text: "don't mention it"
+
+  utter_CourtesyGreeting:
+  - text: "I'm fine ,I hope you're great!!"
+  - text: "fine, thanks"
+  - text: "doing well in this life what about you?"
+  - text: "fine if you're fine"
+
+  utter_name_query: 
+  - text: "I'm viki I work in Ai especially in it's applications in medical field"
+  - text: "I'm viki a Ai agent works in medical field"
+
+  utter_SelfAware:
+  - text: "do can prove to your self you a self ware"
+  - text: "self aware means you know your self,what you do,how to do, when to do"
+
+  utter_Shutup:
+  - text: "Be quiet"
+  - text: "Shut up"
+  - text: "Stop talking"
+  - text: "Enough talking"
+  - text: "Please be quiet"
+  - text: "Quiet"
+  - text: "Shhh"
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
