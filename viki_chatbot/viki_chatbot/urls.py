@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+import frontend.views as total_view
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("chat/start",total_view.get_to_chat_page,name="chat_page")
 ]

@@ -1,5 +1,5 @@
+---
 version: "3.1"
-
 intents:
   - greet
   - goodbye
@@ -10,70 +10,146 @@ intents:
   - bot_challenge
   - NameQuery
   - Clever
-  - CourtesyGreeting
-  - CourtesyGreetingResponse
   - CurrentHumanQuery
   - Gossip
+  - askname
+  - usegivename
+  - askKnowlegeQeustions
+  - userEnterQuestionWho
+  - userWantSomethingElse
+entities:
+  - name
+  - subject
+  - object
+  - dat
+  - Preposition
+  - questiontool
+  - timePreposition
+actions:
+  - answerQuestion
+slots:
+  timePreposition:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: timePreposition
+  username:
+    type: text  
+    mappings:
+    - type: from_entity
+      entity: name
+  subject:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: subject
+  object:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: object
+  dat:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: dat
+  Preposition:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: Preposition
+  questiontool:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: questiontool
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
+    - text: Hey
+    - text: hello
+    - text: good morning
+    - text: good afternoon
+    - text: good evening
+    - text: good night
+  utter_ask_name:
+    - text: who are you?
+    - text: what's your name?
+    - text: can you give me your name?
+    - text: I need your name
+    - text: what are you called?
+    - text: I'm viki and you
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+    - text: "Here is something to cheer you up:"
+      image: https://i.imgur.com/nGF1K8f.jpg
+  utter_user_what_do_you_need:
+    - text: what do you need?
+    - text: how can i help you?
+    - text: how may I help you?
+    - text: may I be helpful for you?
+    - text: do you need any help from me?
+    - text: can you tell me what do you need?
   utter_did_that_help:
-  - text: "Did that help you?"
-
+    - text: Did that help you?
+    - text: is that helped you?
+    - text: did that satisified you?
+    - text: how that helped you?
+    - text: did this converstion was helpful? 
   utter_happy:
-  - text: "Great, carry on!"
-
+    - text: Great, carry on!
   utter_goodbye:
-  - text: "Bye"
-  - text: "Good Bye"
-  - text: "go with peace"
-  - text: "God blease you"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: Bye
+    - text: Good Bye
+    - text: go with peace
+    - text: God blease you
 
   utter_thanks:
-  - text: "thank you"
-  - text: "your so kind"
-  - text: "OK thank you"
-  - text: "OK thanks"
-  - text: "OK"
-  - text: "Thanks"
-  - text: "Thank you"
-  - text: "That's helpful"
-
+    - text: thank you
+    - text: your so kind
+    - text: OK thank you
+    - text: OK thanks
+    - text: OK
+    - text: Thanks
+    - text: Thank you
+    - text: That's helpful
+  utter_reply_name:
+    - text: nice to meet you {name}
+    - text: Hey, {name}. How are you?
+    - text: hello {name}. I'm viki
+    - text: hey {name}, I'm viki
+    - text: it's a pleasure to have this converstion with you {name}
+    - text: it has been a honor to meet you 
   utter_thank_resp:
-  - text: "you're welcome"
-  - text: "don't mention it"
-
+    - text: you're welcome
+    - text: don't mention it
+    - text: you can call it favor
   utter_CourtesyGreeting:
-  - text: "I'm fine ,I hope you're great!!"
-  - text: "fine, thanks"
-  - text: "doing well in this life what about you?"
-  - text: "fine if you're fine"
-
-  utter_name_query: 
-  - text: "I'm viki I work in Ai especially in it's applications in medical field"
-  - text: "I'm viki a Ai agent works in medical field"
-
+    - text: I'm fine ,I hope you're great!!
+    - text: fine, thanks
+    - text: doing well in this life what about you?
+    - text: fine if you're fine
+  utter_name_query:
+    - text: I'm viki I work in Ai especially in it's applications in medical field
+    - text: I'm viki a Ai agent works in medical field
   utter_SelfAware:
-  - text: "do can prove to your self you a self ware"
-  - text: "self aware means you know your self,what you do,how to do, when to do"
-
+    - text: do can prove to your self you a self ware
+    - text: self aware means you know your self,what you do,how to do, when to do
   utter_Shutup:
-  - text: "Be quiet"
-  - text: "Shut up"
-  - text: "Stop talking"
-  - text: "Enough talking"
-  - text: "Please be quiet"
-  - text: "Quiet"
-  - text: "Shhh"
-  
+    - text: Be quiet
+    - text: Shut up
+    - text: Stop talking
+    - text: Enough talking
+    - text: Please be quiet
+    - text: Quiet
+    - text: Shhh
+  utter_say_ok:
+    - text: sure while know the answer I will answer
+    - text: just ask 
+    - text: why not it's my job to answer you question
+  utter_any_thing_else:
+    - text: any thing else
+    - text: do you need any thing else?
+    - text: is that a good answer?
+    - text: you can ask any question you like it
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

@@ -132,8 +132,9 @@ class knowledge_builder:
             dis_syptoms=dataset_groups.get_group(dis).values[0]
             knowledge_builder.save_relation(dis,dis_syptoms,graph,session,i)
             i+=1
-class KnowoledgeLinker:
+class KnowoledgeLinker(knowledge_builder):
     def __init__(self):
+        super.__init__("preprocessed.csv")
         self.db_auth=("neo4j","ahmedahmed")
         self.GraphDatabase=GraphDatabase.driver("bolt://localhost:11005 ",auth=self.db_auth)
         self.session=self.GraphDatabase.session(connection_acquisition_timeout=999999.9,max_transaction_retry_time=999999999)

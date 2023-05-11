@@ -1,48 +1,45 @@
 version: "3.1"
 
 stories:
-
 - story: happy path
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
+  - checkpoint: user_enter_what_do_you_need
+- story: what do you need
+  steps: 
+  - checkpoint: user_enter_what_do_you_need
+  - action: utter_user_what_do_you_need
+  - checkpoint: user_enter_what_do_you_need
+- story: user ask question about name
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-
-- story: name_query
-  steps:
-  - intent: NameQuery
+  - checkpoint: user_enter_what_do_you_need
+  - intent: askname
   - action: utter_name_query
-  - checkpoint: name_query_point
-
-- story:  byby
+  - action: utter_ask_name
+  - intent: usegivename
+  - action: utter_reply_name
+  - checkpoint: end_question
+- story: user_want_question
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
-  - checkpoint: by_by
-
-- story: who are you
+  - checkpoint: user_enter_what_do_you_need
+  - intent: askKnowlegeQeustions
+  - action: utter_say_ok
+  - checkpoint: user_began_enter_question
+- story: userEnteredQuestion
+  steps: 
+  - checkpoint: user_began_enter_question
+  - intent: userEnterQuestionWho
+  - action: answerQuestion
+  - action: utter_any_thing_else
+  - checkpoint: userRequestIsDone
+- story: user decied If he need any thing else
   steps:
-  - intent: CourtesyGreeting
-  - action: utter_CourtesyGreeting
-  - checkpoint: how_do_you_do
+  - checkpoint: userRequestIsDone
+  - intent: deny
+  - checkpoint: user_began_enter_question
+- story: user have some more questions
+  steps:
+  - checkpoint: user_began_enter_question
+  - intent: userWantSomethingElse
+  - checkpoint: user_want_question

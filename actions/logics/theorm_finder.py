@@ -39,8 +39,8 @@ class theorm_finder:
                 sim_vect=symptom_vector.similarity(symptom_givien_vector)
                 sim=edit_distance(symptom_given,symptom)
                 if sim<self.similariy_threshold and sim_vect>self.similarity:
-                    print("candidate:"+symptom)
-                    print("given:"+symptom_given)
+                    """print("candidate:"+symptom)
+                    print("given:"+symptom_given)"""
                     symptom_detected.append(symptom)
                     theorm_score+=1
             i+=2
@@ -67,7 +67,6 @@ class theorm_finder:
         theorms=[]
         theorms.append((max_theorms,self.theorms_addr[0]))
         for theorm in self.theorms.items():
-            print(theorm[0])
             theorm_score=self.calc_theorm_Score(theorm[1],symptoms)
             #if theorm_score>theorms[len(theorms)-1][0]:
             theorms.append((theorm_score,theorm[0]))
