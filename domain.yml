@@ -150,6 +150,11 @@ responses:
     - text: do you need any thing else?
     - text: is that a good answer?
     - text: you can ask any question you like it
+  utter_finish_dialog:
+    - text: It has been an honor talking to you
+    - text: it was a pleasure to talk to you
+    - text: what a sad momount to end the converstion
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

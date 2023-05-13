@@ -1,25 +1,4 @@
 {
-  "name": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 56,
-    "confused_with": {}
-  },
-  "questiontool": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 27,
-    "confused_with": {}
-  },
-  "object": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 21,
-    "confused_with": {}
-  },
   "Preposition": {
     "precision": 1.0,
     "recall": 1.0,
@@ -34,13 +13,6 @@
     "support": 3,
     "confused_with": {}
   },
-  "data": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2,
-    "confused_with": {}
-  },
   "timePreposition": {
     "precision": 1.0,
     "recall": 1.0,
@@ -48,11 +20,39 @@
     "support": 3,
     "confused_with": {}
   },
+  "object": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 21,
+    "confused_with": {}
+  },
   "dat": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 4,
+    "confused_with": {}
+  },
+  "data": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "questiontool": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 27,
+    "confused_with": {}
+  },
+  "name": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 56,
     "confused_with": {}
   },
   "micro avg": {

@@ -5,41 +5,42 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - checkpoint: user_enter_what_do_you_need
-- story: what do you need
-  steps: 
-  - checkpoint: user_enter_what_do_you_need
   - action: utter_user_what_do_you_need
-  - checkpoint: user_enter_what_do_you_need
-- story: user ask question about name
-  steps:
-  - checkpoint: user_enter_what_do_you_need
   - intent: askname
   - action: utter_name_query
   - action: utter_ask_name
   - intent: usegivename
   - action: utter_reply_name
-  - checkpoint: end_question
-- story: user_want_question
+- story: user_want_question with circle
   steps:
-  - checkpoint: user_enter_what_do_you_need
-  - intent: askKnowlegeQeustions
+  - or:
+    - intent: askKnowlegeQeustions
+    - intent: userWantSomethingElse
   - action: utter_say_ok
-  - checkpoint: user_began_enter_question
-- story: userEnteredQuestion
-  steps: 
-  - checkpoint: user_began_enter_question
   - intent: userEnterQuestionWho
   - action: answerQuestion
   - action: utter_any_thing_else
-  - checkpoint: userRequestIsDone
-- story: user decied If he need any thing else
+  - intent: affirm
+  - action: utter_say_ok 
+- story: user_want_question without circle
   steps:
-  - checkpoint: userRequestIsDone
+  - or:
+    - intent: askKnowlegeQeustions
+    - intent: userWantSomethingElse
+  - action: utter_say_ok
+  - intent: userEnterQuestionWho
+  - action: answerQuestion
+  - action: utter_any_thing_else
   - intent: deny
-  - checkpoint: user_began_enter_question
-- story: user have some more questions
+  - action: utter_finish_dialog
+- story:
   steps:
-  - checkpoint: user_began_enter_question
-  - intent: userWantSomethingElse
-  - checkpoint: user_want_question
+  - or:
+    - intent: askKnowlegeQeustions
+    - intent: userWantSomethingElse
+  - action: utter_say_ok
+  - intent: userEnterQuestionWho
+  - action: answerQuestion
+  - action: utter_any_thing_else
+  - intent: affirm
+  - action: utter_say_ok 

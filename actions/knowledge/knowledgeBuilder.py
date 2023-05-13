@@ -4,7 +4,6 @@ import nltk
 from neo4j import GraphDatabase
 from expertai.nlapi.cloud.client import ExpertAiClient
 import csv
-import actions.knowledge.preprocessor
 class knowledge_builder:
     def __init__(self,folderName):
         self.folderName=folderName
@@ -17,7 +16,7 @@ class knowledge_builder:
         #self.pipline=stanza.Pipeline(lang="en",download_method=None,processors="tokenize,pos,lemma,depparse",use_gpu=True) 
     def save_to_kb(self,relations,relation_text,doc_name):
         try:
-            graph=GraphDatabase.driver("neo4j://127.0.0.1:11009",auth=("neo4j","ahmedahmed"))
+            graph=GraphDatabase.driver("bolt://localhost:7687",auth=("neo4j","vikiviki"))
             session=graph.session(connection_acquisition_timeout=999999.9,max_transaction_retry_time=999999999)
             rel_id=self.entity_id
             list_of_related_entity=[]
@@ -74,7 +73,7 @@ class knowledge_builder:
             #ahmedahmed
     def load_back_up(self,file_name):
         back_up=pd.read_csv(file_name)
-        graph=GraphDatabase.driver("bolt://localhost:11009",auth=("neo4j","ahmedahmed"))
+        graph=GraphDatabase.driver("bolt://localhost:7687",auth=("neo4j","vikiviki"))
         session=graph.session(connection_acquisition_timeout=999999.9,max_transaction_retry_time=999999999)
         for query in back_up.values:
             session.run(query[0])
@@ -120,7 +119,7 @@ class knowledge_builder:
             entity_id+=1
         return None
     def descover_knowledge(dataset,target_value_index,target_name):
-        graph=GraphDatabase.driver("bolt://localhost:11005",auth=("neo4j","ahmedahmed"))
+        graph=GraphDatabase.driver("bolt://localhost:7687",auth=("neo4j","vikiviki"))
         session=graph.session(connection_acquisition_timeout=999999.9,max_transaction_retry_time=999999999)
         dataset=pd.read_csv(dataset)
         dataset=dataset.fillna("Noun")
@@ -175,8 +174,9 @@ class KnowoledgeLinker(knowledge_builder):
                     self._replace_concepts(concept["n"],concept_m["n"])
             all_concepts.pop(current_id)
             current_id+=1
-builder=knowledge_builder("preprocessed.csv")
+builder=knowledge_builder("actions/knowledge/preprocessed.csv")
 builder.study()
-knowledge_builder.descover_knowledge("dataset.csv",0,"Disease")
+builder.load_back_up("actions/knowledge/backup.csv")
+knowledge_builder.descover_knowledge("actions/knowledge/dataset.csv",0,"Disease")
 #linker=KnowoledgeLinker()
 #linker.link_all()
