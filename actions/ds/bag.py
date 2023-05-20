@@ -10,4 +10,3 @@ class bag:
             return self._data.pop()
     def get_data(self):
         return self._data
-    

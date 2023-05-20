@@ -220,7 +220,7 @@ nlu:
     - I need your help in some questions
     - I have a question
     - Can you give me answers about some questions
-- intent: userEnterQuestionWho
+- intent: userEnterQuestion
   examples: |
     - [who](questiontool) is [ahmed farghly](subject)?
     - [who](questiontool) did meet [wadah](object)?
@@ -249,5 +249,89 @@ nlu:
     - [who](questiontool) will come [tommorw](timePreposition)?
     - [who](questiontool) will visit [us](object)?
     - [who](questiontool) will be able to [work](data)?
-
-
+    - [when](questiontool) go to univsersity [ahmed farghly](subject)?
+    - [when](questiontool) did [ahmed](subject) meet [wadah](object)?
+    - [when](questiontool) is [he](subject) going [to](Preposition) [university](data)?
+    - [when](questiontool) does [she](subject) play [football](object)?
+    - [when](questiontool) do [they](subject) study [math](object)?
+    - [when](questiontool) was [he](subject) fighting?
+    - [when](questiontool) will [he](subject) eat [fruits](object)?
+    - [when](questiontool) was [it](subject) [in](Preposition) [the kitchin](dat)?
+    - [when](questiontool) did [ahmed](subject) [engy](object)?
+    - [when](questiontool) was [ibrahim](subject) watching [tv](object)?
+    - [when](questiontool) had [he](subject) [a car](object)?
+    - [when](questiontool) was [the car](subject)?
+    - [when](questiontool) eat [fruits](object)?
+    - [when](questiontool) liked [me](object)?
+    - [when](questiontool) is killing [ahmed](object)?
+    - [when](questiontool) is [ahmed](subject) talking [to](Preposition)?
+    - [when](questiontool) is heading to [school](object)
+    - [when](questiontool) was the [tea](subject) made?
+    - [when](questiontool) opened the [door](object)?
+    - [when](questiontool) was [the ww2](subject) won?
+    - [when](questiontool) had been [president sadat](subject) killed?
+    - [when](questiontool) is [he](subject) [in](Preposition) [class room](dat)
+    - [when](questiontool) [he](subject) died [yesterday](timePreposition)?
+    - [when](questiontool) is [he](subject) driving [the car](object) [now](timePreposition)?
+    - [when](questiontool) will [he](subject come [tommorw](timePreposition)?
+    - [when](questiontool) will [he](subject) visit [us](object)?
+    - [when](questiontool) [he](subject will be able to [work](data)?
+    - [where](questiontool) is [ahmed farghly](subject)?
+    - [where](questiontool) did [ahmed](subject) meet [wadah](object)?
+    - [where](questiontool) is [gamal](subject) going [to](Preposition)?
+    - [where](questiontool) does [emad](subject) play [football](object)?
+    - [where](questiontool) does [fatma](subject) study [math](object)?
+    - [where](questiontool) are [ibrahim and ahmed](subject) fighting now?
+    - [where](questiontool) is [shwaki](subject) eating [fruits](object)?
+    - [where](questiontool) is insaf?
+    - [where](questiontool) did [ibrahim](subject) [engy](object)?
+    - [where](questiontool) is [ehab](subject) watching [tv](object)?
+    - [where](questiontool) was [ahmed](subject) when [he](subject) had  [a car](object)?
+    - [where](questiontool) did [he](subject) drove [a car](object)?
+    - [where](questiontool) eat [fruits](object)?
+    - [where](questiontool) liked [me](object)?
+    - [where](questiontool) is [ahmed](object) killded?
+    - [where](questiontool) is [ahmed](subject) talking [to](Preposition) [emad](object)?
+    - [where](questiontool) is [wadah](subject) heading to ?
+    - [where](questiontool) did [ahmed](subject) made the [tea](object)?
+    - [where](questiontool) did [he](subject) die [yesterday](timePreposition)?
+    - [where](questiontool) is driving the car [now](timePreposition)?
+    - [where](questiontool) will [you](subject) go [tommorw](timePreposition)?
+    - [where](questiontool) will visit [us](object)?
+    - [where](questiontool) will be able to [work](data)?
+    - [where](questiontool) is [ahmed farghly](subject)?
+    - [where](questiontool) did meet [wadah](object)?
+    - [where](questiontool) is going [to](Preposition) [university](data)?
+    - [where](questiontool) does play [football](object)?
+    - [where](questiontool) does study [math](object)?
+    - [why](questiontool) did [you](subject) meet [wadah](object)?
+    - [why](questiontool) is [he](subject going [to](Preposition) [university](data)?
+    - [why](questiontool) does [ahmed](subject) play [football](object)?
+    - [why](questiontool) does [ibrahim](subject study [math](object)?
+    - [why](questiontool) is [ashraf](subject) fighting now?
+    - [why](questiontool) does [mohamed](subject) eating [fruits](object)?
+    - [why](questiontool) is [the cat](subject) [in](Preposition) [the kitchin](dat)?
+    - [why](questiontool) does [ahmed][(subject] love [engy](object)?
+    - [why](questiontool) is [he](subject) watching [tv](object)?
+    - [why](questiontool) had [wadah](subject) [a car](object)?
+    - [why](questiontool) did [she](subject) take [a car](object)?
+    - [why](questiontool) do [you](subject) eat [fruits](object)?
+    - [why](questiontool) did [shima](subject) like [me](object)?
+    - [why](questiontool) is [nada](subject) killing [ahmed](object)?
+    - [why](questiontool) is [ahmed](subject) talking [to](Preposition)?
+    - [why](questiontool) is [he](subject) heading to [school](object)
+    - [why](questiontool) [nage]9subject0 made the [tea](object)?
+    - [why](questiontool) did [he](subject) opened the [door](object)?
+    - [why](questiontool) id [te greet britan](subject) win [the ww2](object)?
+    - [why](questiontool) did [the muslims brotherhood](subject) killed [president sadat](object)?
+    - [why](questiontool) is [he](subject) [in](Preposition) [class room](dat)
+    - [why](questiontool) did [mohamed](subject) died [yesterday](timePreposition)?
+    - [why](questiontool) is [he](subject) driving the car [now](timePreposition)?
+    - [why](questiontool) will [they](subject) come [tommorw](timePreposition)?
+    - [why](questiontool) will [ibrahim and ahmed](subject) visit [us](object)?
+    - [why](questiontool) will [proffessor hagag](sujbect) be able to [work](data)?
+    - [why](questiontool) did [ahmed](subject) meet [wadah](object)?
+    - [why](questiontool) is [michael](subject) going [to](Preposition) [university](data)?
+    - [why](questiontool) does [ahmed](subject) play [football](object)?
+    - [why](questiontool) does [you](subject) study [math](object)?
+  
