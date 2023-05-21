@@ -17,6 +17,8 @@ intents:
   - askKnowlegeQeustions
   - userEnterQuestionWho
   - userWantSomethingElse
+  - querydateTime
+  - queryDate
 entities:
   - name
   - subject
@@ -27,6 +29,8 @@ entities:
   - timePreposition
 actions:
   - answerQuestion
+  - query_day_time
+  - date_query
 slots:
   timePreposition:
     type: text

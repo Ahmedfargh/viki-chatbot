@@ -1,23 +1,23 @@
 {
-  "Preposition": {
+  "subject come [tommorw](timePreposition": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 16,
+    "support": 1,
     "confused_with": {}
   },
-  "subject": {
+  "subject going [to](Preposition": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 52,
+    "support": 1,
     "confused_with": {}
   },
-  "object": {
+  "sujbect": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 80,
+    "support": 2,
     "confused_with": {}
   },
   "timePreposition": {
@@ -27,25 +27,18 @@
     "support": 11,
     "confused_with": {}
   },
-  "name": {
+  "object": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 56,
+    "support": 78,
     "confused_with": {}
   },
-  "subject when [he](subject": {
+  "subject study [math](object": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 1,
-    "confused_with": {}
-  },
-  "data": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 9,
     "confused_with": {}
   },
   "subject will be able to [work](data": {
@@ -55,18 +48,32 @@
     "support": 1,
     "confused_with": {}
   },
+  "subject": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 78,
+    "confused_with": {}
+  },
+  "name": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 56,
+    "confused_with": {}
+  },
   "questiontool": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 112,
+    "support": 110,
     "confused_with": {}
   },
-  "subject come [tommorw](timePreposition": {
+  "data": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 1,
+    "support": 8,
     "confused_with": {}
   },
   "dat": {
@@ -76,23 +83,30 @@
     "support": 12,
     "confused_with": {}
   },
+  "Preposition": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15,
+    "confused_with": {}
+  },
   "micro avg": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 351
+    "support": 374
   },
   "macro avg": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 351
+    "support": 374
   },
   "weighted avg": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 351
+    "support": 374
   },
   "accuracy": 1.0
 }

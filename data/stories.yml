@@ -33,7 +33,7 @@ stories:
   - action: utter_any_thing_else
   - intent: deny
   - action: utter_finish_dialog
-- story:
+- story: ask knowledge
   steps:
   - or:
     - intent: askKnowlegeQeustions
@@ -43,4 +43,12 @@ stories:
   - action: answerQuestion
   - action: utter_any_thing_else
   - intent: affirm
-  - action: utter_say_ok 
+  - action: utter_say_ok
+- story: query about time
+  steps:
+  - intent: querydateTime
+  - action: query_day_time
+- story: query date
+  steps:
+  - intent: queryDate
+  - action: date_query

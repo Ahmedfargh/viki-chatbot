@@ -120,7 +120,31 @@ nlu:
     - You are a genious
     - Clever girl
     - Genious
-    
+- intent: queryDate
+  examples: |
+    - what's the date today?
+    - tell me today's date
+    - viki ,what's the date today?
+    - viki ,what's the date today?
+    - viki, tell me today's date
+    - I can't remember which day is it tell me the date?
+    - viki,I can't remember which day is it tell me the date?
+- intent: querydateTime
+  examples: |
+    - how much clock?
+    - what is the time?
+    - can you tell me the time?
+    - I lost my watch can you tell me the time?
+    - please,how much clock?
+    - please, what is the time?
+    - please, can you tell me the time?
+    - viki, how much clock?
+    - viki,what is the time?
+    - viki,can you tell me the time?
+    - viki,I lost my watch can you tell me the time?
+    - viki ,how much clock?
+    - viki,what is the time?
+    - viki,can you tell me the time?
 - intent: CurrentHumanQuery
   examples: |
     - What is my name?
